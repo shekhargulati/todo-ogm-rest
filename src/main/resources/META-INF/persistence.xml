@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="todo" transaction-type="JTA">
+		<!-- Use Hibernate OGM provider: configuration will be transparent -->
+		<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+		<class>com.todo.domain.TodoList</class>
+		<class>com.todo.domain.Todo</class>
+		<properties>
+			<property name="jboss.as.jpa.providerModule" value="org.hibernate:ogm" />
+			<property name="hibernate.ogm.datastore.provider"
+				value="org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider" />
+			<property name="hibernate.ogm.mongodb.host" value="127.6.27.1" />
+			<property name="hibernate.ogm.mongodb.port" value="27017" />
+			<property name="hibernate.ogm.mongodb.database" value="todoogm" />
+			<property name="hibernate.ogm.mongodb.username" value="admin" /> 
+			<property name="hibernate.ogm.mongodb.password" value="ySXMPcEGTkY2" />
+			<property name="hibernate.ogm.mongodb.safe" value="true" />
+			<property name="hibernate.ogm.mongodb.connection_timeout"
+				value="5000" />
+				<!-- Valid values are GLOBAL_COLLECTION | IN_ENTITY | COLLECTION| -->
+			<property name="hibernate.ogm.mongodb.associations.store"
+				value="IN_ENTITY" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
