@@ -1,0 +1,17 @@
+
+org/hibernate
+org/hibernate/ogm/logging/mongodb/impl
+org/hibernate/ogm/logging/mongodb
+org/hibernate/ogm/dialect/mongodb
+META-INF/maven/org.hibernate.ogm/hibernate-ogm-mongodb
+META-INF/maven
+org/hibernate/ogm/datastore/mongodb/impl
+org/hibernate/ogm
+org/hibernate/ogm/datastore/mongodb
+org
+META-INF
+org/hibernate/ogm/datastore
+org/hibernate/ogm/dialect
+org/hibernate/ogm/type
+META-INF/maven/org.hibernate.ogm
+org/hibernate/ogm/logging
